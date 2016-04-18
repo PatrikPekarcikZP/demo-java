@@ -1,0 +1,14 @@
+stages:
+  - build
+job:
+  stage: build
+  tags:
+  - java
+  - maven
+  script:
+  - mvn compile
+  - mvn test
+  - mvn package
+  artifacts:
+    paths:
+    - target/javademo-1.0.jar
